@@ -6,18 +6,18 @@ class Mechcrate < Formula
   homepage "https://mechcrate.dev"
   # macOS is the top-level url (universal binary, both architectures); brew
   # scans the version from it, so no explicit `version` stanza.
-  url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.2/mx-v0.1.2-universal-apple-darwin.tar.gz"
-  sha256 "6ad47f4ffe7fc78ab8db100af5c29b6b60e3bae29f3e3e0790c93589f94757c4"
+  url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.3/mx-v0.1.3-universal-apple-darwin.tar.gz"
+  sha256 "a6026343a4dbab8be6e060f524f567e7400166ae106bae988f57144883d6f0f5"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_linux do
     on_arm do
-      url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.2/mx-v0.1.2-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "4cc39d70a5a77bef67ff260850fa2ae6931ba6744123cc39792431e21e8bdae8"
+      url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.3/mx-v0.1.3-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "000c59c4235f05dcdcad0bb58b2efdf02f59fe18f01e56e3fbcc4b97b376dd82"
     end
     on_intel do
-      url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.2/mx-v0.1.2-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "b80e8ae65fc9d98606b63856df86fcbfd21c9c889cf1cd4b864bbe213a2c147b"
+      url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.3/mx-v0.1.3-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0cae1186a1eaf7328106fb496bc8cb1e44867423d4502b323a8b230a83346a52"
     end
   end
 
@@ -32,6 +32,6 @@ class Mechcrate < Formula
   end
 
   test do
-    assert_match "mx 0.1.2", shell_output("#{bin}/mx --version")
+    assert_match "mx 0.1.3", shell_output("#{bin}/mx --version")
   end
 end
