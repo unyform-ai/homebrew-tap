@@ -2,15 +2,13 @@
 # Do not edit by hand: the tap-bump job in release.yml regenerates this file
 # for every stable release.
 class Mechcrate < Formula
-  desc "MechCrate CLI and MCP server for project scaffolding and infrastructure"
+  desc "CLI and MCP server for scaffolding projects and their infrastructure"
   homepage "https://mechcrate.dev"
-  version "0.1.2"
+  # macOS is the top-level url (universal binary, both architectures); brew
+  # scans the version from it, so no explicit `version` stanza.
+  url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.2/mx-v0.1.2-universal-apple-darwin.tar.gz"
+  sha256 "6ad47f4ffe7fc78ab8db100af5c29b6b60e3bae29f3e3e0790c93589f94757c4"
   license any_of: ["Apache-2.0", "MIT"]
-
-  on_macos do
-    url "https://github.com/unyform-ai/mech-crate-releases/releases/download/v0.1.2/mx-v0.1.2-universal-apple-darwin.tar.gz"
-    sha256 "6ad47f4ffe7fc78ab8db100af5c29b6b60e3bae29f3e3e0790c93589f94757c4"
-  end
 
   on_linux do
     on_arm do
